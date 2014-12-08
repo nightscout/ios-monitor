@@ -27,7 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		DBC6659E1A3623FB00DE1748 /* Nighscout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nighscout.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBC6659E1A3623FB00DE1748 /* Nightscout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nightscout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBC665A21A3623FB00DE1748 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DBC665A31A3623FB00DE1748 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DBC665A51A3623FB00DE1748 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -37,7 +37,7 @@
 		DBC665AC1A3623FB00DE1748 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DBC665AE1A3623FB00DE1748 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DBC665B11A3623FB00DE1748 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		DBC665B71A3623FB00DE1748 /* NighscoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NighscoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBC665B71A3623FB00DE1748 /* NightscoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NightscoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBC665BC1A3623FB00DE1748 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DBC665BD1A3623FB00DE1748 /* NighscoutTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NighscoutTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,8 +63,8 @@
 		DBC665951A3623FA00DE1748 = {
 			isa = PBXGroup;
 			children = (
-				DBC665A01A3623FB00DE1748 /* Nighscout */,
-				DBC665BA1A3623FB00DE1748 /* NighscoutTests */,
+				DBC665A01A3623FB00DE1748 /* Nightscout */,
+				DBC665BA1A3623FB00DE1748 /* NightscoutTests */,
 				DBC6659F1A3623FB00DE1748 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -72,13 +72,13 @@
 		DBC6659F1A3623FB00DE1748 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DBC6659E1A3623FB00DE1748 /* Nighscout.app */,
-				DBC665B71A3623FB00DE1748 /* NighscoutTests.xctest */,
+				DBC6659E1A3623FB00DE1748 /* Nightscout.app */,
+				DBC665B71A3623FB00DE1748 /* NightscoutTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DBC665A01A3623FB00DE1748 /* Nighscout */ = {
+		DBC665A01A3623FB00DE1748 /* Nightscout */ = {
 			isa = PBXGroup;
 			children = (
 				DBC665A51A3623FB00DE1748 /* AppDelegate.h */,
@@ -90,6 +90,7 @@
 				DBC665B01A3623FB00DE1748 /* LaunchScreen.xib */,
 				DBC665A11A3623FB00DE1748 /* Supporting Files */,
 			);
+			name = Nightscout;
 			path = Nighscout;
 			sourceTree = "<group>";
 		};
@@ -102,12 +103,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		DBC665BA1A3623FB00DE1748 /* NighscoutTests */ = {
+		DBC665BA1A3623FB00DE1748 /* NightscoutTests */ = {
 			isa = PBXGroup;
 			children = (
 				DBC665BD1A3623FB00DE1748 /* NighscoutTests.m */,
 				DBC665BB1A3623FB00DE1748 /* Supporting Files */,
 			);
+			name = NightscoutTests;
 			path = NighscoutTests;
 			sourceTree = "<group>";
 		};
@@ -122,9 +124,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DBC6659D1A3623FB00DE1748 /* Nighscout */ = {
+		DBC6659D1A3623FB00DE1748 /* Nightscout */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DBC665C11A3623FB00DE1748 /* Build configuration list for PBXNativeTarget "Nighscout" */;
+			buildConfigurationList = DBC665C11A3623FB00DE1748 /* Build configuration list for PBXNativeTarget "Nightscout" */;
 			buildPhases = (
 				DBC6659A1A3623FB00DE1748 /* Sources */,
 				DBC6659B1A3623FB00DE1748 /* Frameworks */,
@@ -134,14 +136,14 @@
 			);
 			dependencies = (
 			);
-			name = Nighscout;
+			name = Nightscout;
 			productName = Nighscout;
-			productReference = DBC6659E1A3623FB00DE1748 /* Nighscout.app */;
+			productReference = DBC6659E1A3623FB00DE1748 /* Nightscout.app */;
 			productType = "com.apple.product-type.application";
 		};
-		DBC665B61A3623FB00DE1748 /* NighscoutTests */ = {
+		DBC665B61A3623FB00DE1748 /* NightscoutTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DBC665C41A3623FB00DE1748 /* Build configuration list for PBXNativeTarget "NighscoutTests" */;
+			buildConfigurationList = DBC665C41A3623FB00DE1748 /* Build configuration list for PBXNativeTarget "NightscoutTests" */;
 			buildPhases = (
 				DBC665B31A3623FB00DE1748 /* Sources */,
 				DBC665B41A3623FB00DE1748 /* Frameworks */,
@@ -152,9 +154,9 @@
 			dependencies = (
 				DBC665B91A3623FB00DE1748 /* PBXTargetDependency */,
 			);
-			name = NighscoutTests;
+			name = NightscoutTests;
 			productName = NighscoutTests;
-			productReference = DBC665B71A3623FB00DE1748 /* NighscoutTests.xctest */;
+			productReference = DBC665B71A3623FB00DE1748 /* NightscoutTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -175,7 +177,7 @@
 					};
 				};
 			};
-			buildConfigurationList = DBC665991A3623FB00DE1748 /* Build configuration list for PBXProject "Nighscout" */;
+			buildConfigurationList = DBC665991A3623FB00DE1748 /* Build configuration list for PBXProject "Nightscout" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -188,8 +190,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DBC6659D1A3623FB00DE1748 /* Nighscout */,
-				DBC665B61A3623FB00DE1748 /* NighscoutTests */,
+				DBC6659D1A3623FB00DE1748 /* Nightscout */,
+				DBC665B61A3623FB00DE1748 /* NightscoutTests */,
 			);
 		};
 /* End PBXProject section */
@@ -238,7 +240,7 @@
 /* Begin PBXTargetDependency section */
 		DBC665B91A3623FB00DE1748 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DBC6659D1A3623FB00DE1748 /* Nighscout */;
+			target = DBC6659D1A3623FB00DE1748 /* Nightscout */;
 			targetProxy = DBC665B81A3623FB00DE1748 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -347,8 +349,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Nighscout/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 2;
+				PRODUCT_NAME = Nightscout;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -358,8 +360,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Nighscout/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 2;
+				PRODUCT_NAME = Nightscout;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -377,7 +379,7 @@
 				);
 				INFOPLIST_FILE = NighscoutTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = NightscoutTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nighscout.app/Nighscout";
 			};
 			name = Debug;
@@ -392,7 +394,7 @@
 				);
 				INFOPLIST_FILE = NighscoutTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = NightscoutTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nighscout.app/Nighscout";
 			};
 			name = Release;
@@ -400,7 +402,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DBC665991A3623FB00DE1748 /* Build configuration list for PBXProject "Nighscout" */ = {
+		DBC665991A3623FB00DE1748 /* Build configuration list for PBXProject "Nightscout" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DBC665BF1A3623FB00DE1748 /* Debug */,
@@ -409,21 +411,23 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DBC665C11A3623FB00DE1748 /* Build configuration list for PBXNativeTarget "Nighscout" */ = {
+		DBC665C11A3623FB00DE1748 /* Build configuration list for PBXNativeTarget "Nightscout" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DBC665C21A3623FB00DE1748 /* Debug */,
 				DBC665C31A3623FB00DE1748 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		DBC665C41A3623FB00DE1748 /* Build configuration list for PBXNativeTarget "NighscoutTests" */ = {
+		DBC665C41A3623FB00DE1748 /* Build configuration list for PBXNativeTarget "NightscoutTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DBC665C51A3623FB00DE1748 /* Debug */,
 				DBC665C61A3623FB00DE1748 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

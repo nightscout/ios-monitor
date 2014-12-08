@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DBC6659D1A3623FB00DE1748"
-               BuildableName = "Nighscout.app"
-               BlueprintName = "Nighscout"
-               ReferencedContainer = "container:Nighscout.xcodeproj">
+               BuildableName = "Nightscout.app"
+               BlueprintName = "Nightscout"
+               ReferencedContainer = "container:Nightscout.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DBC665B61A3623FB00DE1748"
-               BuildableName = "NighscoutTests.xctest"
-               BlueprintName = "NighscoutTests"
-               ReferencedContainer = "container:Nighscout.xcodeproj">
+               BuildableName = "NightscoutTests.xctest"
+               BlueprintName = "NightscoutTests"
+               ReferencedContainer = "container:Nightscout.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DBC665B61A3623FB00DE1748"
-               BuildableName = "NighscoutTests.xctest"
-               BlueprintName = "NighscoutTests"
-               ReferencedContainer = "container:Nighscout.xcodeproj">
+               BuildableName = "NightscoutTests.xctest"
+               BlueprintName = "NightscoutTests"
+               ReferencedContainer = "container:Nightscout.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DBC6659D1A3623FB00DE1748"
-            BuildableName = "Nighscout.app"
-            BlueprintName = "Nighscout"
-            ReferencedContainer = "container:Nighscout.xcodeproj">
+            BuildableName = "Nightscout.app"
+            BlueprintName = "Nightscout"
+            ReferencedContainer = "container:Nightscout.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DBC6659D1A3623FB00DE1748"
-            BuildableName = "Nighscout.app"
-            BlueprintName = "Nighscout"
-            ReferencedContainer = "container:Nighscout.xcodeproj">
+            BuildableName = "Nightscout.app"
+            BlueprintName = "Nightscout"
+            ReferencedContainer = "container:Nightscout.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -94,9 +94,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DBC6659D1A3623FB00DE1748"
-            BuildableName = "Nighscout.app"
-            BlueprintName = "Nighscout"
-            ReferencedContainer = "container:Nighscout.xcodeproj">
+            BuildableName = "Nightscout.app"
+            BlueprintName = "Nightscout"
+            ReferencedContainer = "container:Nightscout.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

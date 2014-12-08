@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,7 +16,40 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="94s-lY-C7V">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="544"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZsI-gN-kN5">
+                                <rect key="frame" x="535" y="561" width="51" height="31"/>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GUq-Nq-VYC">
+                                <rect key="frame" x="277" y="562" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xhq-O6-s1q">
+                                <rect key="frame" x="16" y="562" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="94s-lY-C7V" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="6a7-Yo-LtB"/>
+                            <constraint firstItem="GUq-Nq-VYC" firstAttribute="baseline" secondItem="Xhq-O6-s1q" secondAttribute="baseline" id="Bqd-Ss-D1u"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ZsI-gN-kN5" secondAttribute="bottom" constant="8" symbolic="YES" id="D4a-h1-jeM"/>
+                            <constraint firstItem="94s-lY-C7V" firstAttribute="centerX" secondItem="GUq-Nq-VYC" secondAttribute="centerX" id="KTH-xU-JyQ"/>
+                            <constraint firstItem="ZsI-gN-kN5" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="d1C-gO-5hI"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Xhq-O6-s1q" secondAttribute="bottom" constant="8" symbolic="YES" id="dFg-nY-wqu"/>
+                            <constraint firstItem="ZsI-gN-kN5" firstAttribute="top" secondItem="94s-lY-C7V" secondAttribute="bottom" constant="17" id="hjr-ys-dGI"/>
+                            <constraint firstItem="Xhq-O6-s1q" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="trO-AI-MH1"/>
+                            <constraint firstAttribute="trailing" secondItem="94s-lY-C7V" secondAttribute="trailing" id="ttk-Ar-2Th"/>
+                            <constraint firstItem="94s-lY-C7V" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="zbd-E9-g5G"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
