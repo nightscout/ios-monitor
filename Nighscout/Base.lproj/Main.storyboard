@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6221" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -82,6 +82,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="20"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Pda-Oa-pu9">
+                                <rect key="frame" x="281" y="281" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -89,10 +92,12 @@
                             <constraint firstItem="eAh-Rd-4o5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="6oL-se-sjO"/>
                             <constraint firstItem="Xhq-O6-s1q" firstAttribute="baseline" secondItem="GUq-Nq-VYC" secondAttribute="baseline" id="8BQ-zd-sBH"/>
                             <constraint firstItem="94s-lY-C7V" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8U1-sZ-2U0"/>
+                            <constraint firstItem="Pda-Oa-pu9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="9AL-vp-ng9"/>
                             <constraint firstItem="Xhq-O6-s1q" firstAttribute="top" secondItem="94s-lY-C7V" secondAttribute="bottom" constant="18" id="G70-RN-vsK"/>
                             <constraint firstItem="GUq-Nq-VYC" firstAttribute="baseline" secondItem="l3i-yp-c31" secondAttribute="baseline" id="NfN-uc-2db"/>
                             <constraint firstItem="eAh-Rd-4o5" firstAttribute="trailing" secondItem="94s-lY-C7V" secondAttribute="trailing" id="OWT-Yn-Dxi"/>
                             <constraint firstItem="94s-lY-C7V" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="Oe2-Sy-Lpf"/>
+                            <constraint firstItem="Pda-Oa-pu9" firstAttribute="centerX" secondItem="GUq-Nq-VYC" secondAttribute="centerX" id="PDe-lL-EZh"/>
                             <constraint firstItem="eAh-Rd-4o5" firstAttribute="bottom" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Y1i-ON-KXg"/>
                             <constraint firstItem="Xhq-O6-s1q" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="eN2-1d-XM8"/>
                             <constraint firstItem="GUq-Nq-VYC" firstAttribute="centerX" secondItem="94s-lY-C7V" secondAttribute="centerX" id="hnu-7K-ruE"/>
@@ -102,6 +107,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="loadingIndicator" destination="Pda-Oa-pu9" id="ceM-dQ-H0J"/>
                         <outlet property="nightscoutSite" destination="94s-lY-C7V" id="4Gc-hB-eiC"/>
                         <outlet property="refreshUrl" destination="GUq-Nq-VYC" id="QrP-kJ-0d9"/>
                         <outlet property="setUrl" destination="Xhq-O6-s1q" id="nPl-Dy-oCc"/>

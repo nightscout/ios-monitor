@@ -22,6 +22,12 @@
     
     [super viewDidLoad];
     
+    self.nightscoutSite.delegate = self;
+    self.nightscoutSite.backgroundColor = [UIColor clearColor];
+    self.nightscoutSite.alpha = 0.0;
+    self.nightscoutSite.scrollView.scrollEnabled = NO;
+    [self.loadingIndicator startAnimating];
+    
     [self registerDefaultsFromSettingsBundle];
     NSUserDefaults *data = [NSUserDefaults standardUserDefaults];
     NSString *lastUrl = [data objectForKey:@"lastUrl"];
@@ -152,6 +158,50 @@
     }
     
     [[NSUserDefaults standardUserDefaults] registerDefaults:defaultsToRegister];
+    
+}
+
+#pragma mark - UIWebViewDelegate delegate methods
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
+{
+    return YES;
+}
+
+- (void)webViewDidStartLoad:(UIWebView *)webView{
+    
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView
+{
+    
+    webView.backgroundColor = [UIColor blackColor];
+    webView.opaque = YES;
+    
+    [self fadeIn : webView withDuration: 2 andWait : 0 ];
+    
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+}
+
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
+{
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+    //TODO: alert to failure
+}
+
+#pragma mark ANIMATION
+-(void)fadeIn:(UIView*)viewToFadeIn withDuration:(NSTimeInterval)duration 	  andWait:(NSTimeInterval)wait
+{
+    [UIView beginAnimations: @"Fade In" context:nil];
+    
+    // wait for time before begin
+    [UIView setAnimationDelay:wait];
+    
+    // druation of animation
+    [UIView setAnimationDuration:duration];
+    viewToFadeIn.alpha = 1;
+    [UIView commitAnimations];
+    [self.loadingIndicator stopAnimating];
     
 }
 
