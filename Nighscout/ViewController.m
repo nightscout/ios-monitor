@@ -11,6 +11,7 @@
 
 @interface ViewController ()
 @property NSString *nightscoutUrl;
+@property NSString *defaultUrl;
 @end
 
 @implementation ViewController
@@ -25,9 +26,7 @@
     NSNumber *screenLock = [data valueForKey:@"screenLock"];
     NSInteger screenLockValue = [screenLock intValue];
     
-    [UIApplication sharedApplication].idleTimerDisabled = YES;
-
-    if (lastUrl==nil){
+    if (lastUrl==nil || [lastUrl  isEqual:self.defaultUrl]){
         [self requestUrl:@"Please enter your Nightscout URL"];
     } else
     {
@@ -38,25 +37,18 @@
     if(screenLockValue == 1)
     {
         [self.sleep setTitle: @"Sleep Off" forState: UIControlStateNormal];
-        
+        [UIApplication sharedApplication].idleTimerDisabled = YES;
         
     } else{
         
-        [self.sleep setTitle: @"Sleep Off" forState: UIControlStateNormal];
-        
+        [self.sleep setTitle: @"Sleep On" forState: UIControlStateNormal];
+        [UIApplication sharedApplication].idleTimerDisabled = NO;
     }
-    
-    
-    
-    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
-
-
 
 - (void)requestUrl:(NSString *)message {
     UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Hello!" message:message delegate:self cancelButtonTitle:@"Continue" otherButtonTitles:@"Cancel",nil];
@@ -77,6 +69,8 @@
         [self.nightscoutSite stringByEvaluatingJavaScriptFromString:jsCallBack];
     } else {
         [self requestUrl:@"Hmm, URL was not valid, please retry"];
+        NSString *key = @"lastUrl";
+        [[NSUserDefaults standardUserDefaults] setObject:self.defaultUrl forKey:key];
     }
 }
 
@@ -87,6 +81,17 @@
         NSString *key = @"lastUrl";
         [[NSUserDefaults standardUserDefaults] setObject:self.nightscoutUrl  forKey:key];
         [self loadUrl];
+    } else {
+        NSURL *url = [NSURL URLWithString:self.nightscoutUrl];
+        if (url && url.scheme && url.host) {
+            [self loadUrl];
+        } else {
+            NSURL *url = [NSURL URLWithString:self.defaultUrl ];
+            if (url && url.scheme && url.host) {
+                NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
+                [self.nightscoutSite loadRequest:requestObj];
+            }
+        }
     }
     
 }
@@ -101,6 +106,18 @@
 
 - (IBAction)changeSleep:(id)sender {
     NSString *title = [(UIButton *)sender currentTitle];
+    if([title isEqual:@"Sleep On"])
+    {
+        [self.sleep setTitle: @"Sleep Off" forState: UIControlStateNormal];
+        NSString *key = @"screenLock";
+        [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithBool:YES]  forKey:key];
+        [UIApplication sharedApplication].idleTimerDisabled = YES;
+    } else{
+        [self.sleep setTitle: @"Sleep On" forState: UIControlStateNormal];
+        NSString *key = @"screenLock";
+        [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithBool:NO]  forKey:key];
+        [UIApplication sharedApplication].idleTimerDisabled = NO;
+    }
 }
 
 - (void)registerDefaultsFromSettingsBundle {
