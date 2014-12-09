@@ -9,11 +9,11 @@
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 
-@interface NighscoutTests : XCTestCase
+@interface NightscoutTests : XCTestCase
 
 @end
 
-@implementation NighscoutTests
+@implementation NightscoutTests
 
 - (void)setUp {
     [super setUp];

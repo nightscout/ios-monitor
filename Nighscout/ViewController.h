@@ -8,8 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UIWebViewDelegate>
 
+
+@property (weak, nonatomic) IBOutlet UIWebView *nightscoutSite;
+@property (weak, nonatomic) IBOutlet UIButton *setUrl;
+@property (weak, nonatomic) IBOutlet UIButton *refreshUrl;
+@property (weak, nonatomic) IBOutlet UIButton *sleep;
+
+- (IBAction)updateUrl:(id)sender;
+- (IBAction)reloadUrl:(id)sender;
+- (IBAction)changeSleep:(id)sender;
 
 @end
 

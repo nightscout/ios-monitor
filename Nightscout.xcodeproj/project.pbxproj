@@ -7,13 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB8DB6551A36558800C81DD6 /* Nightscout-Vertical.png in Resources */ = {isa = PBXBuildFile; fileRef = DB8DB6541A36558800C81DD6 /* Nightscout-Vertical.png */; };
+		DB8DB65E1A36753700C81DD6 /* logo76.png in Resources */ = {isa = PBXBuildFile; fileRef = DB8DB65A1A36753700C81DD6 /* logo76.png */; };
+		DB8DB65F1A36753700C81DD6 /* logo152.png in Resources */ = {isa = PBXBuildFile; fileRef = DB8DB65B1A36753700C81DD6 /* logo152.png */; };
+		DB8DB6601A36753700C81DD6 /* logo120.png in Resources */ = {isa = PBXBuildFile; fileRef = DB8DB65C1A36753700C81DD6 /* logo120.png */; };
+		DB8DB6611A36753700C81DD6 /* logo180.png in Resources */ = {isa = PBXBuildFile; fileRef = DB8DB65D1A36753700C81DD6 /* logo180.png */; };
+		DB8DB6631A36843A00C81DD6 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DB8DB6621A36843A00C81DD6 /* Settings.bundle */; };
 		DBC665A41A3623FB00DE1748 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC665A31A3623FB00DE1748 /* main.m */; };
 		DBC665A71A3623FB00DE1748 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC665A61A3623FB00DE1748 /* AppDelegate.m */; };
 		DBC665AA1A3623FB00DE1748 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC665A91A3623FB00DE1748 /* ViewController.m */; };
 		DBC665AD1A3623FB00DE1748 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBC665AB1A3623FB00DE1748 /* Main.storyboard */; };
 		DBC665AF1A3623FB00DE1748 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBC665AE1A3623FB00DE1748 /* Images.xcassets */; };
 		DBC665B21A3623FB00DE1748 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBC665B01A3623FB00DE1748 /* LaunchScreen.xib */; };
-		DBC665BE1A3623FB00DE1748 /* NighscoutTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC665BD1A3623FB00DE1748 /* NighscoutTests.m */; };
+		DBC665BE1A3623FB00DE1748 /* NightscoutTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC665BD1A3623FB00DE1748 /* NightscoutTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +33,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DB8DB6541A36558800C81DD6 /* Nightscout-Vertical.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Nightscout-Vertical.png"; sourceTree = "<group>"; };
+		DB8DB65A1A36753700C81DD6 /* logo76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo76.png; sourceTree = "<group>"; };
+		DB8DB65B1A36753700C81DD6 /* logo152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo152.png; sourceTree = "<group>"; };
+		DB8DB65C1A36753700C81DD6 /* logo120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo120.png; sourceTree = "<group>"; };
+		DB8DB65D1A36753700C81DD6 /* logo180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo180.png; sourceTree = "<group>"; };
+		DB8DB6621A36843A00C81DD6 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = Nighscout/Settings.bundle; sourceTree = "<group>"; };
 		DBC6659E1A3623FB00DE1748 /* Nightscout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nightscout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBC665A21A3623FB00DE1748 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DBC665A31A3623FB00DE1748 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -39,7 +51,7 @@
 		DBC665B11A3623FB00DE1748 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		DBC665B71A3623FB00DE1748 /* NightscoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NightscoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBC665BC1A3623FB00DE1748 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DBC665BD1A3623FB00DE1748 /* NighscoutTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NighscoutTests.m; sourceTree = "<group>"; };
+		DBC665BD1A3623FB00DE1748 /* NightscoutTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NightscoutTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +75,7 @@
 		DBC665951A3623FA00DE1748 = {
 			isa = PBXGroup;
 			children = (
+				DB8DB6621A36843A00C81DD6 /* Settings.bundle */,
 				DBC665A01A3623FB00DE1748 /* Nightscout */,
 				DBC665BA1A3623FB00DE1748 /* NightscoutTests */,
 				DBC6659F1A3623FB00DE1748 /* Products */,
@@ -97,6 +110,11 @@
 		DBC665A11A3623FB00DE1748 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DB8DB65A1A36753700C81DD6 /* logo76.png */,
+				DB8DB65B1A36753700C81DD6 /* logo152.png */,
+				DB8DB65C1A36753700C81DD6 /* logo120.png */,
+				DB8DB65D1A36753700C81DD6 /* logo180.png */,
+				DB8DB6541A36558800C81DD6 /* Nightscout-Vertical.png */,
 				DBC665A21A3623FB00DE1748 /* Info.plist */,
 				DBC665A31A3623FB00DE1748 /* main.m */,
 			);
@@ -106,7 +124,7 @@
 		DBC665BA1A3623FB00DE1748 /* NightscoutTests */ = {
 			isa = PBXGroup;
 			children = (
-				DBC665BD1A3623FB00DE1748 /* NighscoutTests.m */,
+				DBC665BD1A3623FB00DE1748 /* NightscoutTests.m */,
 				DBC665BB1A3623FB00DE1748 /* Supporting Files */,
 			);
 			name = NightscoutTests;
@@ -170,6 +188,11 @@
 				TargetAttributes = {
 					DBC6659D1A3623FB00DE1748 = {
 						CreatedOnToolsVersion = 6.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					DBC665B61A3623FB00DE1748 = {
 						CreatedOnToolsVersion = 6.1;
@@ -202,8 +225,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBC665AD1A3623FB00DE1748 /* Main.storyboard in Resources */,
+				DB8DB6551A36558800C81DD6 /* Nightscout-Vertical.png in Resources */,
+				DB8DB6601A36753700C81DD6 /* logo120.png in Resources */,
 				DBC665B21A3623FB00DE1748 /* LaunchScreen.xib in Resources */,
+				DB8DB6611A36753700C81DD6 /* logo180.png in Resources */,
+				DB8DB65F1A36753700C81DD6 /* logo152.png in Resources */,
 				DBC665AF1A3623FB00DE1748 /* Images.xcassets in Resources */,
+				DB8DB6631A36843A00C81DD6 /* Settings.bundle in Resources */,
+				DB8DB65E1A36753700C81DD6 /* logo76.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,7 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBC665BE1A3623FB00DE1748 /* NighscoutTests.m in Sources */,
+				DBC665BE1A3623FB00DE1748 /* NightscoutTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,7 +409,7 @@
 				INFOPLIST_FILE = NighscoutTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = NightscoutTests;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nighscout.app/Nighscout";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nightscout.app/Nightscout";
 			};
 			name = Debug;
 		};
@@ -395,7 +424,7 @@
 				INFOPLIST_FILE = NighscoutTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = NightscoutTests;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nighscout.app/Nighscout";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nightscout.app/Nightscout";
 			};
 			name = Release;
 		};
