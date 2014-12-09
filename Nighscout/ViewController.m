@@ -18,6 +18,8 @@
 
 - (void)viewDidLoad {
     
+    self.defaultUrl = @"http://go.nightscout.info";
+    
     [super viewDidLoad];
     
     [self registerDefaultsFromSettingsBundle];
@@ -51,7 +53,7 @@
 }
 
 - (void)requestUrl:(NSString *)message {
-    UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Hello!" message:message delegate:self cancelButtonTitle:@"Continue" otherButtonTitles:@"Cancel",nil];
+    UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Hello!" message:message delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Continue",nil];
     alert.alertViewStyle = UIAlertViewStylePlainTextInput;
     UITextField * alertTextField = [alert textFieldAtIndex:0];
     alertTextField.keyboardType = UIKeyboardTypeAlphabet;
@@ -60,6 +62,9 @@
 }
 
 - (void)loadUrl {
+    
+    
+    
     NSURL *url = [NSURL URLWithString:self.nightscoutUrl];
     if (url && url.scheme && url.host) {
         NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
@@ -75,9 +80,16 @@
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
-    if (buttonIndex==0){
+    if (buttonIndex==1){
         NSLog(@"Entered: %@",[[alertView textFieldAtIndex:0] text]);
         self.nightscoutUrl =[[alertView textFieldAtIndex:0] text];
+        if ([self.nightscoutUrl hasPrefix:@"http://"] || [self.nightscoutUrl hasPrefix:@"https://"] )
+        {
+            //good to go
+        }
+        else {
+            self.nightscoutUrl = [NSString stringWithFormat:@"http://%@", self.nightscoutUrl];
+        }
         NSString *key = @"lastUrl";
         [[NSUserDefaults standardUserDefaults] setObject:self.nightscoutUrl  forKey:key];
         [self loadUrl];
@@ -93,7 +105,6 @@
             }
         }
     }
-    
 }
 
 - (IBAction)updateUrl:(id)sender {
