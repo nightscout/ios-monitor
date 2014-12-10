@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		80A5F86E1A38F9EF001524BC /* Logo_180.png in Resources */ = {isa = PBXBuildFile; fileRef = 80A5F8691A38F9EF001524BC /* Logo_180.png */; };
+		80A5F86F1A38F9EF001524BC /* Logo_120.png in Resources */ = {isa = PBXBuildFile; fileRef = 80A5F86A1A38F9EF001524BC /* Logo_120.png */; };
+		80A5F8701A38F9EF001524BC /* Logo_512.png in Resources */ = {isa = PBXBuildFile; fileRef = 80A5F86B1A38F9EF001524BC /* Logo_512.png */; };
+		80A5F8711A38F9EF001524BC /* Logo_152.png in Resources */ = {isa = PBXBuildFile; fileRef = 80A5F86C1A38F9EF001524BC /* Logo_152.png */; };
+		80A5F8721A38F9EF001524BC /* Logo_76.png in Resources */ = {isa = PBXBuildFile; fileRef = 80A5F86D1A38F9EF001524BC /* Logo_76.png */; };
 		DB8DB6551A36558800C81DD6 /* Nightscout-Vertical.png in Resources */ = {isa = PBXBuildFile; fileRef = DB8DB6541A36558800C81DD6 /* Nightscout-Vertical.png */; };
-		DB8DB65E1A36753700C81DD6 /* logo76.png in Resources */ = {isa = PBXBuildFile; fileRef = DB8DB65A1A36753700C81DD6 /* logo76.png */; };
-		DB8DB65F1A36753700C81DD6 /* logo152.png in Resources */ = {isa = PBXBuildFile; fileRef = DB8DB65B1A36753700C81DD6 /* logo152.png */; };
-		DB8DB6601A36753700C81DD6 /* logo120.png in Resources */ = {isa = PBXBuildFile; fileRef = DB8DB65C1A36753700C81DD6 /* logo120.png */; };
-		DB8DB6611A36753700C81DD6 /* logo180.png in Resources */ = {isa = PBXBuildFile; fileRef = DB8DB65D1A36753700C81DD6 /* logo180.png */; };
 		DB8DB6631A36843A00C81DD6 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DB8DB6621A36843A00C81DD6 /* Settings.bundle */; };
 		DBC665A41A3623FB00DE1748 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC665A31A3623FB00DE1748 /* main.m */; };
 		DBC665A71A3623FB00DE1748 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC665A61A3623FB00DE1748 /* AppDelegate.m */; };
@@ -33,11 +34,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		80A5F8691A38F9EF001524BC /* Logo_180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo_180.png; sourceTree = "<group>"; };
+		80A5F86A1A38F9EF001524BC /* Logo_120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo_120.png; sourceTree = "<group>"; };
+		80A5F86B1A38F9EF001524BC /* Logo_512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo_512.png; sourceTree = "<group>"; };
+		80A5F86C1A38F9EF001524BC /* Logo_152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo_152.png; sourceTree = "<group>"; };
+		80A5F86D1A38F9EF001524BC /* Logo_76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo_76.png; sourceTree = "<group>"; };
 		DB8DB6541A36558800C81DD6 /* Nightscout-Vertical.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Nightscout-Vertical.png"; sourceTree = "<group>"; };
-		DB8DB65A1A36753700C81DD6 /* logo76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo76.png; sourceTree = "<group>"; };
-		DB8DB65B1A36753700C81DD6 /* logo152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo152.png; sourceTree = "<group>"; };
-		DB8DB65C1A36753700C81DD6 /* logo120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo120.png; sourceTree = "<group>"; };
-		DB8DB65D1A36753700C81DD6 /* logo180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo180.png; sourceTree = "<group>"; };
 		DB8DB6621A36843A00C81DD6 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = Nighscout/Settings.bundle; sourceTree = "<group>"; };
 		DBC6659E1A3623FB00DE1748 /* Nightscout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nightscout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBC665A21A3623FB00DE1748 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -110,10 +112,11 @@
 		DBC665A11A3623FB00DE1748 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				DB8DB65A1A36753700C81DD6 /* logo76.png */,
-				DB8DB65B1A36753700C81DD6 /* logo152.png */,
-				DB8DB65C1A36753700C81DD6 /* logo120.png */,
-				DB8DB65D1A36753700C81DD6 /* logo180.png */,
+				80A5F8691A38F9EF001524BC /* Logo_180.png */,
+				80A5F86A1A38F9EF001524BC /* Logo_120.png */,
+				80A5F86B1A38F9EF001524BC /* Logo_512.png */,
+				80A5F86C1A38F9EF001524BC /* Logo_152.png */,
+				80A5F86D1A38F9EF001524BC /* Logo_76.png */,
 				DB8DB6541A36558800C81DD6 /* Nightscout-Vertical.png */,
 				DBC665A21A3623FB00DE1748 /* Info.plist */,
 				DBC665A31A3623FB00DE1748 /* main.m */,
@@ -227,13 +230,14 @@
 			files = (
 				DBC665AD1A3623FB00DE1748 /* Main.storyboard in Resources */,
 				DB8DB6551A36558800C81DD6 /* Nightscout-Vertical.png in Resources */,
-				DB8DB6601A36753700C81DD6 /* logo120.png in Resources */,
+				80A5F86E1A38F9EF001524BC /* Logo_180.png in Resources */,
 				DBC665B21A3623FB00DE1748 /* LaunchScreen.xib in Resources */,
-				DB8DB6611A36753700C81DD6 /* logo180.png in Resources */,
-				DB8DB65F1A36753700C81DD6 /* logo152.png in Resources */,
+				80A5F86F1A38F9EF001524BC /* Logo_120.png in Resources */,
 				DBC665AF1A3623FB00DE1748 /* Images.xcassets in Resources */,
 				DB8DB6631A36843A00C81DD6 /* Settings.bundle in Resources */,
-				DB8DB65E1A36753700C81DD6 /* logo76.png in Resources */,
+				80A5F8721A38F9EF001524BC /* Logo_76.png in Resources */,
+				80A5F8701A38F9EF001524BC /* Logo_512.png in Resources */,
+				80A5F8711A38F9EF001524BC /* Logo_152.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,7 +333,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -365,7 +369,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
