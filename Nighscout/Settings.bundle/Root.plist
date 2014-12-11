@@ -12,7 +12,7 @@
 			<key>Key</key>
 			<string>lastUrl</string>
 			<key>DefaultValue</key>
-			<string>http://go.nightscout.info</string>
+			<string>http://www.nightscout.info/wiki/welcome/nightscout-for-ios-optional</string>
 		</dict>
 		<dict>
 			<key>Type</key>

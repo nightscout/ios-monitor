@@ -12,13 +12,14 @@
 @interface ViewController ()
 @property NSString *nightscoutUrl;
 @property NSString *defaultUrl;
+@property NSString *lastUrl;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     
-    self.defaultUrl = @"http://go.nightscout.info";
+    self.defaultUrl = @"http://www.nightscout.info/wiki/welcome/nightscout-for-ios-optional";
     
     [super viewDidLoad];
     [self setNeedsStatusBarAppearanceUpdate];
@@ -26,20 +27,23 @@
     self.nightscoutSite.delegate = self;
     self.nightscoutSite.backgroundColor = [UIColor clearColor];
     self.nightscoutSite.alpha = 0.0;
-    self.nightscoutSite.scrollView.scrollEnabled = NO;
+    
     [self.loadingIndicator startAnimating];
     
     [self registerDefaultsFromSettingsBundle];
     NSUserDefaults *data = [NSUserDefaults standardUserDefaults];
-    NSString *lastUrl = [data objectForKey:@"lastUrl"];
+    self.lastUrl = [data objectForKey:@"lastUrl"];
     NSNumber *screenLock = [data valueForKey:@"screenLock"];
     NSInteger screenLockValue = [screenLock intValue];
     
-    if (lastUrl==nil || [lastUrl  isEqual:self.defaultUrl]){
+    if (self.lastUrl==nil || [self.lastUrl  isEqual:self.defaultUrl]){
         [self requestUrl:@"Please enter your Nightscout URL"];
+        [self.setUrl setTitle:@"Set URL" forState: UIControlStateNormal];
     } else
     {
-        self.nightscoutUrl = lastUrl;
+        self.nightscoutSite.scrollView.scrollEnabled = NO;
+        self.nightscoutUrl = self.lastUrl;
+        [self.setUrl setTitle:@"Change URL" forState: UIControlStateNormal];
         [self loadUrl];
     }
     
@@ -72,7 +76,14 @@
     alert.alertViewStyle = UIAlertViewStylePlainTextInput;
     UITextField * alertTextField = [alert textFieldAtIndex:0];
     alertTextField.keyboardType = UIKeyboardTypeAlphabet;
-    alertTextField.placeholder = @"http://your.nightscout.site";
+    
+    if (self.lastUrl==nil || [self.lastUrl  isEqual:self.defaultUrl]){
+        alertTextField.placeholder = @"http://your.nightscout.site";
+    } else
+    {
+        alertTextField.text = self.lastUrl;
+    }
+    
     [alert show];
 }
 
@@ -105,6 +116,9 @@
         }
         NSString *key = @"lastUrl";
         [[NSUserDefaults standardUserDefaults] setObject:self.nightscoutUrl  forKey:key];
+        self.lastUrl = self.nightscoutUrl;
+        self.nightscoutSite.scrollView.scrollEnabled = NO;
+        [self.setUrl setTitle:@"Change URL" forState: UIControlStateNormal];
         [self loadUrl];
     } else {
         NSURL *url = [NSURL URLWithString:self.nightscoutUrl];
@@ -193,7 +207,8 @@
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
 {
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-    //TODO: alert to failure
+    [self requestUrl:@"Sorry, I couldn't load the page, please verify address:"];
+    NSLog(@"Error loading page");
 }
 
 #pragma mark ANIMATION
