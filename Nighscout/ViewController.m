@@ -41,7 +41,6 @@
         [self.setUrl setTitle:@"Set URL" forState: UIControlStateNormal];
     } else
     {
-        self.nightscoutSite.scrollView.scrollEnabled = NO;
         self.nightscoutUrl = self.lastUrl;
         [self.setUrl setTitle:@"Change URL" forState: UIControlStateNormal];
         [self loadUrl];
@@ -77,6 +76,7 @@
     UITextField * alertTextField = [alert textFieldAtIndex:0];
     alertTextField.keyboardType = UIKeyboardTypeAlphabet;
     
+    //TODO: boolean return method as this is being reused
     if (self.lastUrl==nil || [self.lastUrl  isEqual:self.defaultUrl]){
         alertTextField.placeholder = @"http://your.nightscout.site";
     } else
@@ -117,7 +117,6 @@
         NSString *key = @"lastUrl";
         [[NSUserDefaults standardUserDefaults] setObject:self.nightscoutUrl  forKey:key];
         self.lastUrl = self.nightscoutUrl;
-        self.nightscoutSite.scrollView.scrollEnabled = NO;
         [self.setUrl setTitle:@"Change URL" forState: UIControlStateNormal];
         [self loadUrl];
     } else {
