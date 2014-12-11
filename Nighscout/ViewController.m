@@ -21,6 +21,7 @@
     self.defaultUrl = @"http://go.nightscout.info";
     
     [super viewDidLoad];
+    [self setNeedsStatusBarAppearanceUpdate];
     
     self.nightscoutSite.delegate = self;
     self.nightscoutSite.backgroundColor = [UIColor clearColor];
@@ -54,6 +55,14 @@
     }
 }
 
+-(UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
+}
+
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
+    [self loadUrl];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
@@ -68,8 +77,6 @@
 }
 
 - (void)loadUrl {
-    
-    
     
     NSURL *url = [NSURL URLWithString:self.nightscoutUrl];
     if (url && url.scheme && url.host) {
