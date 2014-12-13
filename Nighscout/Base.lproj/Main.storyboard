@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="94s-lY-C7V">
-                                <rect key="frame" x="0.0" y="20" width="600" height="524"/>
+                                <rect key="frame" x="0.0" y="20" width="600" height="509"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GUq-Nq-VYC">
@@ -81,13 +81,17 @@
                                     <action selector="changeSleep:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Llm-f4-3dY"/>
                                 </connections>
                             </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="cPw-aN-d6v" customClass="SNVolumeSlider">
+                                <rect key="frame" x="0.0" y="529" width="600" height="31"/>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Xhq-O6-s1q" firstAttribute="top" secondItem="cPw-aN-d6v" secondAttribute="bottom" constant="3" id="0dj-u9-cyU"/>
                             <constraint firstItem="Xhq-O6-s1q" firstAttribute="baseline" secondItem="GUq-Nq-VYC" secondAttribute="baseline" id="8BQ-zd-sBH"/>
                             <constraint firstItem="94s-lY-C7V" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8U1-sZ-2U0"/>
                             <constraint firstItem="Pda-Oa-pu9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="9AL-vp-ng9"/>
-                            <constraint firstItem="Xhq-O6-s1q" firstAttribute="top" secondItem="94s-lY-C7V" secondAttribute="bottom" constant="18" id="G70-RN-vsK"/>
+                            <constraint firstItem="Xhq-O6-s1q" firstAttribute="top" secondItem="94s-lY-C7V" secondAttribute="bottom" constant="33" id="G70-RN-vsK"/>
                             <constraint firstItem="GUq-Nq-VYC" firstAttribute="baseline" secondItem="l3i-yp-c31" secondAttribute="baseline" id="NfN-uc-2db"/>
                             <constraint firstItem="94s-lY-C7V" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="Oe2-Sy-Lpf"/>
                             <constraint firstItem="Pda-Oa-pu9" firstAttribute="centerX" secondItem="GUq-Nq-VYC" secondAttribute="centerX" id="PDe-lL-EZh"/>
@@ -96,9 +100,12 @@
                             <constraint firstAttribute="trailing" secondItem="94s-lY-C7V" secondAttribute="trailing" id="qj6-KN-G2D"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Xhq-O6-s1q" secondAttribute="bottom" constant="8" symbolic="YES" id="qzV-zG-kAK"/>
                             <constraint firstItem="l3i-yp-c31" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="rxb-5o-dMV"/>
+                            <constraint firstItem="cPw-aN-d6v" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-14" id="wTZ-Jw-t4b"/>
+                            <constraint firstItem="cPw-aN-d6v" firstAttribute="centerX" secondItem="GUq-Nq-VYC" secondAttribute="centerX" id="yPT-sG-bxL"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="alertVolume" destination="cPw-aN-d6v" id="CG4-GZ-nCu"/>
                         <outlet property="loadingIndicator" destination="Pda-Oa-pu9" id="ceM-dQ-H0J"/>
                         <outlet property="nightscoutSite" destination="94s-lY-C7V" id="4Gc-hB-eiC"/>
                         <outlet property="refreshUrl" destination="GUq-Nq-VYC" id="QrP-kJ-0d9"/>

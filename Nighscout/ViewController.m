@@ -22,6 +22,7 @@
     self.defaultUrl = @"http://www.nightscout.info/wiki/welcome/nightscout-for-ios-optional";
     
     [super viewDidLoad];
+    self.alertVolume = [[SNVolumeSlider alloc] init];
     [self setNeedsStatusBarAppearanceUpdate];
     
     self.nightscoutSite.delegate = self;

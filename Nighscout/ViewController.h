@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SNVolumeSlider.h"
+
 
 @interface ViewController : UIViewController <UIWebViewDelegate>
 
@@ -16,6 +18,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *refreshUrl;
 @property (weak, nonatomic) IBOutlet UIButton *sleep;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *loadingIndicator;
+@property (strong, nonatomic) IBOutlet SNVolumeSlider *alertVolume;
+
 
 - (IBAction)updateUrl:(id)sender;
 - (IBAction)reloadUrl:(id)sender;

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		809AAFBB1A3CDD4C00724B43 /* SNVolumeSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 809AAFBA1A3CDD4C00724B43 /* SNVolumeSlider.m */; };
+		809AAFBD1A3CE02F00724B43 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 809AAFBC1A3CE02F00724B43 /* MediaPlayer.framework */; };
+		809AAFBF1A3CE03500724B43 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 809AAFBE1A3CE03500724B43 /* AudioToolbox.framework */; };
 		80A5F86E1A38F9EF001524BC /* Logo_180.png in Resources */ = {isa = PBXBuildFile; fileRef = 80A5F8691A38F9EF001524BC /* Logo_180.png */; };
 		80A5F86F1A38F9EF001524BC /* Logo_120.png in Resources */ = {isa = PBXBuildFile; fileRef = 80A5F86A1A38F9EF001524BC /* Logo_120.png */; };
 		80A5F8701A38F9EF001524BC /* Logo_512.png in Resources */ = {isa = PBXBuildFile; fileRef = 80A5F86B1A38F9EF001524BC /* Logo_512.png */; };
@@ -34,6 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		809AAFB91A3CDD4C00724B43 /* SNVolumeSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNVolumeSlider.h; sourceTree = "<group>"; };
+		809AAFBA1A3CDD4C00724B43 /* SNVolumeSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNVolumeSlider.m; sourceTree = "<group>"; };
+		809AAFBC1A3CE02F00724B43 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		809AAFBE1A3CE03500724B43 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		80A5F8691A38F9EF001524BC /* Logo_180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo_180.png; sourceTree = "<group>"; };
 		80A5F86A1A38F9EF001524BC /* Logo_120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo_120.png; sourceTree = "<group>"; };
 		80A5F86B1A38F9EF001524BC /* Logo_512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo_512.png; sourceTree = "<group>"; };
@@ -61,6 +68,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				809AAFBF1A3CE03500724B43 /* AudioToolbox.framework in Frameworks */,
+				809AAFBD1A3CE02F00724B43 /* MediaPlayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +86,8 @@
 		DBC665951A3623FA00DE1748 = {
 			isa = PBXGroup;
 			children = (
+				809AAFBE1A3CE03500724B43 /* AudioToolbox.framework */,
+				809AAFBC1A3CE02F00724B43 /* MediaPlayer.framework */,
 				DB8DB6621A36843A00C81DD6 /* Settings.bundle */,
 				DBC665A01A3623FB00DE1748 /* Nightscout */,
 				DBC665BA1A3623FB00DE1748 /* NightscoutTests */,
@@ -96,6 +107,8 @@
 		DBC665A01A3623FB00DE1748 /* Nightscout */ = {
 			isa = PBXGroup;
 			children = (
+				809AAFB91A3CDD4C00724B43 /* SNVolumeSlider.h */,
+				809AAFBA1A3CDD4C00724B43 /* SNVolumeSlider.m */,
 				DBC665A51A3623FB00DE1748 /* AppDelegate.h */,
 				DBC665A61A3623FB00DE1748 /* AppDelegate.m */,
 				DBC665A81A3623FB00DE1748 /* ViewController.h */,
@@ -258,6 +271,7 @@
 				DBC665AA1A3623FB00DE1748 /* ViewController.m in Sources */,
 				DBC665A71A3623FB00DE1748 /* AppDelegate.m in Sources */,
 				DBC665A41A3623FB00DE1748 /* main.m in Sources */,
+				809AAFBB1A3CDD4C00724B43 /* SNVolumeSlider.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
