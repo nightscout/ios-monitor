@@ -40,7 +40,7 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     ViewController* mainController = (ViewController*)  self.window.rootViewController;
-    [mainController loadUrl];
+    [mainController refreshNightscout];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {

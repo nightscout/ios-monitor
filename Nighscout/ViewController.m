@@ -24,39 +24,9 @@
     [super viewDidLoad];
     self.alertVolume = [[SNVolumeSlider alloc] init];
     [self setNeedsStatusBarAppearanceUpdate];
+    [self refreshNightscout];
     
-    self.nightscoutSite.delegate = self;
-    self.nightscoutSite.backgroundColor = [UIColor clearColor];
-    self.nightscoutSite.alpha = 0.0;
-    
-    [self.loadingIndicator startAnimating];
-    
-    [self registerDefaultsFromSettingsBundle];
-    NSUserDefaults *data = [NSUserDefaults standardUserDefaults];
-    self.lastUrl = [data objectForKey:@"lastUrl"];
-    NSNumber *screenLock = [data valueForKey:@"screenLock"];
-    NSInteger screenLockValue = [screenLock intValue];
-    
-    if (self.lastUrl==nil || [self.lastUrl  isEqual:self.defaultUrl]){
-        [self requestUrl:@"Please enter your Nightscout URL"];
-        [self.setUrl setTitle:@"Set URL" forState: UIControlStateNormal];
-    } else
-    {
-        self.nightscoutUrl = self.lastUrl;
-        [self.setUrl setTitle:@"Change URL" forState: UIControlStateNormal];
-        [self loadUrl];
-    }
-    
-    if(screenLockValue == 1)
-    {
-        [self.sleep setTitle: @"Sleep Off" forState: UIControlStateNormal];
-        [UIApplication sharedApplication].idleTimerDisabled = YES;
-        
-    } else{
-        
-        [self.sleep setTitle: @"Sleep On" forState: UIControlStateNormal];
-        [UIApplication sharedApplication].idleTimerDisabled = NO;
-    }
+
 }
 
 -(UIStatusBarStyle)preferredStatusBarStyle{
@@ -95,8 +65,6 @@
         NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
         [self.nightscoutSite loadRequest:requestObj];
         self.nightscoutSite.mediaPlaybackRequiresUserAction = NO;
-        NSString * jsCallBack = @"window.getSelection().removeAllRanges();";
-        [self.nightscoutSite stringByEvaluatingJavaScriptFromString:jsCallBack];
     } else {
         [self requestUrl:@"Hmm, URL was not valid, please retry"];
         NSString *key = @"lastUrl";
@@ -141,6 +109,42 @@
 - (IBAction)reloadUrl:(id)sender {
     [self loadUrl];
 }
+
+- (void) refreshNightscout {
+    self.nightscoutSite.delegate = self;
+    self.nightscoutSite.backgroundColor = [UIColor clearColor];
+    self.nightscoutSite.alpha = 0.0;
+    
+    [self.loadingIndicator startAnimating];
+    
+    [self registerDefaultsFromSettingsBundle];
+    NSUserDefaults *data = [NSUserDefaults standardUserDefaults];
+    self.lastUrl = [data objectForKey:@"lastUrl"];
+    NSNumber *screenLock = [data valueForKey:@"screenLock"];
+    NSInteger screenLockValue = [screenLock intValue];
+    
+    if (self.lastUrl==nil || [self.lastUrl  isEqual:self.defaultUrl]){
+        [self requestUrl:@"Please enter your Nightscout URL"];
+        [self.setUrl setTitle:@"Set URL" forState: UIControlStateNormal];
+    } else
+    {
+        self.nightscoutUrl = self.lastUrl;
+        [self.setUrl setTitle:@"Change URL" forState: UIControlStateNormal];
+        [self loadUrl];
+    }
+    if(screenLockValue == 1)
+    {
+        [self.sleep setTitle: @"Sleep Off" forState: UIControlStateNormal];
+        [UIApplication sharedApplication].idleTimerDisabled = YES;
+        
+    } else{
+        
+        [self.sleep setTitle: @"Sleep On" forState: UIControlStateNormal];
+        [UIApplication sharedApplication].idleTimerDisabled = NO;
+    }
+
+}
+
 
 - (IBAction)changeSleep:(id)sender {
     NSString *title = [(UIButton *)sender currentTitle];
@@ -199,15 +203,21 @@
     webView.backgroundColor = [UIColor blackColor];
     webView.opaque = YES;
     
-    [self fadeIn : webView withDuration: 2 andWait : 0 ];
+    [self fadeIn : webView withDuration: 2 andWait : 1 ];
     
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+    [self.loadingIndicator stopAnimating];
+    // Disable user selection
+    [webView stringByEvaluatingJavaScriptFromString:@"document.documentElement.style.webkitUserSelect='none';"];
+    // Disable callout
+    [webView stringByEvaluatingJavaScriptFromString:@"document.documentElement.style.webkitTouchCallout='none';"];
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
 {
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-    [self requestUrl:@"Sorry, I couldn't load the page, please verify address:"];
+    //[self.loadingIndicator stopAnimating];
+    //[self requestUrl:@"Sorry, I couldn't load the page, please verify address:"];
     NSLog(@"Error loading page");
 }
 
@@ -223,7 +233,7 @@
     [UIView setAnimationDuration:duration];
     viewToFadeIn.alpha = 1;
     [UIView commitAnimations];
-    [self.loadingIndicator stopAnimating];
+    
     
 }
 

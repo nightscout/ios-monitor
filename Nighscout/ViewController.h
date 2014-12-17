@@ -24,7 +24,7 @@
 - (IBAction)updateUrl:(id)sender;
 - (IBAction)reloadUrl:(id)sender;
 - (IBAction)changeSleep:(id)sender;
-- (void)loadUrl;
+- (void)refreshNightscout;
 
 @end
 
