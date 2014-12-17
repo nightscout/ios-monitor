@@ -15,6 +15,8 @@
 		80A5F8701A38F9EF001524BC /* Logo_512.png in Resources */ = {isa = PBXBuildFile; fileRef = 80A5F86B1A38F9EF001524BC /* Logo_512.png */; };
 		80A5F8711A38F9EF001524BC /* Logo_152.png in Resources */ = {isa = PBXBuildFile; fileRef = 80A5F86C1A38F9EF001524BC /* Logo_152.png */; };
 		80A5F8721A38F9EF001524BC /* Logo_76.png in Resources */ = {isa = PBXBuildFile; fileRef = 80A5F86D1A38F9EF001524BC /* Logo_76.png */; };
+		80E002651A41D51800ACD2D5 /* volume-up-4-24.png in Resources */ = {isa = PBXBuildFile; fileRef = 80E002631A41D51800ACD2D5 /* volume-up-4-24.png */; };
+		80E002661A41D51800ACD2D5 /* mute-2-24.png in Resources */ = {isa = PBXBuildFile; fileRef = 80E002641A41D51800ACD2D5 /* mute-2-24.png */; };
 		DB8DB6551A36558800C81DD6 /* Nightscout-Vertical.png in Resources */ = {isa = PBXBuildFile; fileRef = DB8DB6541A36558800C81DD6 /* Nightscout-Vertical.png */; };
 		DB8DB6631A36843A00C81DD6 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DB8DB6621A36843A00C81DD6 /* Settings.bundle */; };
 		DBC665A41A3623FB00DE1748 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC665A31A3623FB00DE1748 /* main.m */; };
@@ -46,6 +48,8 @@
 		80A5F86B1A38F9EF001524BC /* Logo_512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo_512.png; sourceTree = "<group>"; };
 		80A5F86C1A38F9EF001524BC /* Logo_152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo_152.png; sourceTree = "<group>"; };
 		80A5F86D1A38F9EF001524BC /* Logo_76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo_76.png; sourceTree = "<group>"; };
+		80E002631A41D51800ACD2D5 /* volume-up-4-24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "volume-up-4-24.png"; sourceTree = "<group>"; };
+		80E002641A41D51800ACD2D5 /* mute-2-24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mute-2-24.png"; sourceTree = "<group>"; };
 		DB8DB6541A36558800C81DD6 /* Nightscout-Vertical.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Nightscout-Vertical.png"; sourceTree = "<group>"; };
 		DB8DB6621A36843A00C81DD6 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = Nighscout/Settings.bundle; sourceTree = "<group>"; };
 		DBC6659E1A3623FB00DE1748 /* Nightscout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nightscout.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,6 +129,8 @@
 		DBC665A11A3623FB00DE1748 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				80E002631A41D51800ACD2D5 /* volume-up-4-24.png */,
+				80E002641A41D51800ACD2D5 /* mute-2-24.png */,
 				80A5F8691A38F9EF001524BC /* Logo_180.png */,
 				80A5F86A1A38F9EF001524BC /* Logo_120.png */,
 				80A5F86B1A38F9EF001524BC /* Logo_512.png */,
@@ -249,6 +255,8 @@
 				DBC665AF1A3623FB00DE1748 /* Images.xcassets in Resources */,
 				DB8DB6631A36843A00C81DD6 /* Settings.bundle in Resources */,
 				80A5F8721A38F9EF001524BC /* Logo_76.png in Resources */,
+				80E002651A41D51800ACD2D5 /* volume-up-4-24.png in Resources */,
+				80E002661A41D51800ACD2D5 /* mute-2-24.png in Resources */,
 				80A5F8701A38F9EF001524BC /* Logo_512.png in Resources */,
 				80A5F8711A38F9EF001524BC /* Logo_152.png in Resources */,
 			);
