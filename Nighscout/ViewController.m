@@ -62,7 +62,8 @@
     
     NSURL *url = [NSURL URLWithString:self.nightscoutUrl];
     if (url && url.scheme && url.host) {
-        NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
+        NSURLRequest *requestObj = [NSURLRequest requestWithURL:url cachePolicy: NSURLRequestReloadIgnoringCacheData
+                                                timeoutInterval:10.0];
         [self.nightscoutSite loadRequest:requestObj];
         self.nightscoutSite.mediaPlaybackRequiresUserAction = NO;
     } else {
