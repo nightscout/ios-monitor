@@ -62,45 +62,43 @@
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Pda-Oa-pu9">
                                 <rect key="frame" x="281" y="281" width="37" height="37"/>
                             </activityIndicatorView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l3i-yp-c31">
-                                <rect key="frame" x="484" y="562" width="100" height="30"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="PKP-eN-isb"/>
-                                </constraints>
-                                <state key="normal" title="Sleep Off">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="changeSleep:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Llm-f4-3dY"/>
-                                </connections>
-                            </button>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" minimumValueImage="mute-2-24.png" maximumValueImage="volume-up-4-24.png" translatesAutoresizingMaskIntoConstraints="NO" id="cPw-aN-d6v" customClass="SNVolumeSlider">
                                 <rect key="frame" x="17" y="524" width="566" height="31"/>
                                 <color key="tintColor" red="1" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </slider>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="oVI-sD-5Pz">
+                                <rect key="frame" x="535" y="561" width="51" height="31"/>
+                                <connections>
+                                    <action selector="changeSleep:" destination="BYZ-38-t0r" eventType="valueChanged" id="bdH-6n-OFX"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R8v-ZL-wix">
+                                <rect key="frame" x="443" y="554" width="89" height="46"/>
+                                <string key="text">Screen Lock 
+Override</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Xhq-O6-s1q" firstAttribute="top" secondItem="cPw-aN-d6v" secondAttribute="bottom" constant="8" id="0dj-u9-cyU"/>
+                            <constraint firstItem="R8v-ZL-wix" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="48e-bl-e24"/>
                             <constraint firstItem="Xhq-O6-s1q" firstAttribute="baseline" secondItem="GUq-Nq-VYC" secondAttribute="baseline" id="8BQ-zd-sBH"/>
                             <constraint firstItem="94s-lY-C7V" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8U1-sZ-2U0"/>
                             <constraint firstItem="Pda-Oa-pu9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="9AL-vp-ng9"/>
+                            <constraint firstItem="R8v-ZL-wix" firstAttribute="centerY" secondItem="Xhq-O6-s1q" secondAttribute="centerY" id="DGd-bK-4Cy"/>
                             <constraint firstItem="Xhq-O6-s1q" firstAttribute="top" secondItem="94s-lY-C7V" secondAttribute="bottom" constant="42" id="G70-RN-vsK"/>
-                            <constraint firstItem="GUq-Nq-VYC" firstAttribute="baseline" secondItem="l3i-yp-c31" secondAttribute="baseline" id="NfN-uc-2db"/>
+                            <constraint firstItem="oVI-sD-5Pz" firstAttribute="leading" secondItem="R8v-ZL-wix" secondAttribute="trailing" constant="3" id="LlW-Xu-nIA"/>
                             <constraint firstItem="94s-lY-C7V" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="Oe2-Sy-Lpf"/>
                             <constraint firstItem="Pda-Oa-pu9" firstAttribute="centerX" secondItem="GUq-Nq-VYC" secondAttribute="centerX" id="PDe-lL-EZh"/>
+                            <constraint firstItem="oVI-sD-5Pz" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="WJ6-eL-taM"/>
                             <constraint firstItem="Xhq-O6-s1q" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="eN2-1d-XM8"/>
                             <constraint firstItem="GUq-Nq-VYC" firstAttribute="centerX" secondItem="94s-lY-C7V" secondAttribute="centerX" id="hnu-7K-ruE"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="oVI-sD-5Pz" secondAttribute="bottom" constant="8" symbolic="YES" id="ols-rS-zhd"/>
                             <constraint firstAttribute="trailing" secondItem="94s-lY-C7V" secondAttribute="trailing" id="qj6-KN-G2D"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Xhq-O6-s1q" secondAttribute="bottom" constant="8" symbolic="YES" id="qzV-zG-kAK"/>
-                            <constraint firstItem="l3i-yp-c31" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="rxb-5o-dMV"/>
                             <constraint firstItem="cPw-aN-d6v" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="3" id="wTZ-Jw-t4b"/>
                             <constraint firstItem="cPw-aN-d6v" firstAttribute="centerX" secondItem="GUq-Nq-VYC" secondAttribute="centerX" id="yPT-sG-bxL"/>
                         </constraints>
@@ -110,8 +108,8 @@
                         <outlet property="loadingIndicator" destination="Pda-Oa-pu9" id="ceM-dQ-H0J"/>
                         <outlet property="nightscoutSite" destination="94s-lY-C7V" id="4Gc-hB-eiC"/>
                         <outlet property="refreshUrl" destination="GUq-Nq-VYC" id="QrP-kJ-0d9"/>
+                        <outlet property="screenLock" destination="oVI-sD-5Pz" id="6Jr-rV-XYc"/>
                         <outlet property="setUrl" destination="Xhq-O6-s1q" id="nPl-Dy-oCc"/>
-                        <outlet property="sleep" destination="l3i-yp-c31" id="goY-Tc-2HQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

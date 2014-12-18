@@ -148,19 +148,19 @@
 
 
 - (IBAction)changeSleep:(id)sender {
-    NSString *title = [(UIButton *)sender currentTitle];
-    if([title isEqual:@"Sleep On"])
-    {
-        [self.sleep setTitle: @"Sleep Off" forState: UIControlStateNormal];
+    
+    if([sender isOn]){
+        NSLog(@"Switch is ON");
         NSString *key = @"screenLock";
         [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithBool:YES]  forKey:key];
         [UIApplication sharedApplication].idleTimerDisabled = YES;
     } else{
-        [self.sleep setTitle: @"Sleep On" forState: UIControlStateNormal];
+        NSLog(@"Switch is OFF");
         NSString *key = @"screenLock";
         [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithBool:NO]  forKey:key];
         [UIApplication sharedApplication].idleTimerDisabled = NO;
     }
+    
 }
 
 - (void)registerDefaultsFromSettingsBundle {

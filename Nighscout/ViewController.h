@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *sleep;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *loadingIndicator;
 @property (strong, nonatomic) IBOutlet SNVolumeSlider *alertVolume;
+@property (strong, nonatomic) IBOutlet UISwitch *screenLock;
 
 
 - (IBAction)updateUrl:(id)sender;
