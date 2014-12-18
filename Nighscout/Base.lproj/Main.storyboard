@@ -22,10 +22,10 @@
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GUq-Nq-VYC">
-                                <rect key="frame" x="250" y="562" width="100" height="30"/>
+                                <rect key="frame" x="268" y="562" width="63" height="30"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="FSb-Gp-wXe"/>
+                                    <constraint firstAttribute="width" constant="63" id="FSb-Gp-wXe"/>
                                 </constraints>
                                 <state key="normal" title="Refresh">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -40,8 +40,29 @@
                                     <action selector="reloadUrl:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s8x-Zb-wss"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Pda-Oa-pu9">
+                                <rect key="frame" x="281" y="281" width="37" height="37"/>
+                            </activityIndicatorView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" minimumValueImage="mute-2-24.png" maximumValueImage="volume-up-4-24.png" translatesAutoresizingMaskIntoConstraints="NO" id="cPw-aN-d6v" customClass="SNVolumeSlider">
+                                <rect key="frame" x="17" y="524" width="566" height="31"/>
+                                <color key="tintColor" red="1" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </slider>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="oVI-sD-5Pz">
+                                <rect key="frame" x="545" y="562" width="51" height="31"/>
+                                <connections>
+                                    <action selector="changeSleep:" destination="BYZ-38-t0r" eventType="valueChanged" id="bdH-6n-OFX"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R8v-ZL-wix">
+                                <rect key="frame" x="454" y="554" width="89" height="46"/>
+                                <string key="text">Screen Lock 
+Override</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xhq-O6-s1q">
-                                <rect key="frame" x="16" y="562" width="100" height="30"/>
+                                <rect key="frame" x="5" y="562" width="100" height="30"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="syk-hr-2JU"/>
@@ -59,27 +80,6 @@
                                     <action selector="updateUrl:" destination="BYZ-38-t0r" eventType="touchUpInside" id="te0-L5-tRB"/>
                                 </connections>
                             </button>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Pda-Oa-pu9">
-                                <rect key="frame" x="281" y="281" width="37" height="37"/>
-                            </activityIndicatorView>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" minimumValueImage="mute-2-24.png" maximumValueImage="volume-up-4-24.png" translatesAutoresizingMaskIntoConstraints="NO" id="cPw-aN-d6v" customClass="SNVolumeSlider">
-                                <rect key="frame" x="17" y="524" width="566" height="31"/>
-                                <color key="tintColor" red="1" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            </slider>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="oVI-sD-5Pz">
-                                <rect key="frame" x="535" y="561" width="51" height="31"/>
-                                <connections>
-                                    <action selector="changeSleep:" destination="BYZ-38-t0r" eventType="valueChanged" id="bdH-6n-OFX"/>
-                                </connections>
-                            </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R8v-ZL-wix">
-                                <rect key="frame" x="443" y="554" width="89" height="46"/>
-                                <string key="text">Screen Lock 
-Override</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -90,13 +90,13 @@ Override</string>
                             <constraint firstItem="Pda-Oa-pu9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="9AL-vp-ng9"/>
                             <constraint firstItem="R8v-ZL-wix" firstAttribute="centerY" secondItem="Xhq-O6-s1q" secondAttribute="centerY" id="DGd-bK-4Cy"/>
                             <constraint firstItem="Xhq-O6-s1q" firstAttribute="top" secondItem="94s-lY-C7V" secondAttribute="bottom" constant="42" id="G70-RN-vsK"/>
-                            <constraint firstItem="oVI-sD-5Pz" firstAttribute="leading" secondItem="R8v-ZL-wix" secondAttribute="trailing" constant="3" id="LlW-Xu-nIA"/>
+                            <constraint firstItem="oVI-sD-5Pz" firstAttribute="leading" secondItem="R8v-ZL-wix" secondAttribute="trailing" constant="2" id="LlW-Xu-nIA"/>
                             <constraint firstItem="94s-lY-C7V" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="Oe2-Sy-Lpf"/>
                             <constraint firstItem="Pda-Oa-pu9" firstAttribute="centerX" secondItem="GUq-Nq-VYC" secondAttribute="centerX" id="PDe-lL-EZh"/>
-                            <constraint firstItem="oVI-sD-5Pz" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="WJ6-eL-taM"/>
-                            <constraint firstItem="Xhq-O6-s1q" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="eN2-1d-XM8"/>
+                            <constraint firstItem="oVI-sD-5Pz" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="10" id="WJ6-eL-taM"/>
+                            <constraint firstItem="Xhq-O6-s1q" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-11" id="eN2-1d-XM8"/>
                             <constraint firstItem="GUq-Nq-VYC" firstAttribute="centerX" secondItem="94s-lY-C7V" secondAttribute="centerX" id="hnu-7K-ruE"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="oVI-sD-5Pz" secondAttribute="bottom" constant="8" symbolic="YES" id="ols-rS-zhd"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="oVI-sD-5Pz" secondAttribute="bottom" constant="7" id="ols-rS-zhd"/>
                             <constraint firstAttribute="trailing" secondItem="94s-lY-C7V" secondAttribute="trailing" id="qj6-KN-G2D"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Xhq-O6-s1q" secondAttribute="bottom" constant="8" symbolic="YES" id="qzV-zG-kAK"/>
                             <constraint firstItem="cPw-aN-d6v" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="3" id="wTZ-Jw-t4b"/>
