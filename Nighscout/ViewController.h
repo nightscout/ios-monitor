@@ -20,12 +20,14 @@
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *loadingIndicator;
 @property (strong, nonatomic) IBOutlet SNVolumeSlider *alertVolume;
 @property (strong, nonatomic) IBOutlet UISwitch *screenLock;
+@property (strong, nonatomic) IBOutlet UIVisualEffectView *blur;
 
 
 - (IBAction)updateUrl:(id)sender;
 - (IBAction)reloadUrl:(id)sender;
 - (IBAction)changeSleep:(id)sender;
 - (void)refreshNightscout;
-
+- (void)fadeIn:(UIView*)viewToFadeIn withDuration:(NSTimeInterval)duration 	  andWait:(NSTimeInterval)wait;
+- (void)blankWebView;
 @end
 

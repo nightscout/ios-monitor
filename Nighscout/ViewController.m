@@ -20,9 +20,13 @@
 - (void)viewDidLoad {
     
     self.defaultUrl = @"http://www.nightscout.info/wiki/welcome/nightscout-for-ios-optional";
-    
+    self.blur.hidden = YES;
     [super viewDidLoad];
     self.alertVolume = [[SNVolumeSlider alloc] init];
+    [self.setUrl.layer setBorderWidth:1.0];
+    [self.setUrl.layer setBorderColor:[[UIColor whiteColor] CGColor]];
+    [self.refreshUrl.layer setBorderWidth:1.0];
+    [self.refreshUrl.layer setBorderColor:[[UIColor whiteColor] CGColor]];
     [self setNeedsStatusBarAppearanceUpdate];
     [self refreshNightscout];
     
@@ -200,11 +204,8 @@
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
-    
-    webView.backgroundColor = [UIColor blackColor];
-    webView.opaque = YES;
-    
-    [self fadeIn : webView withDuration: 2 andWait : 1 ];
+        
+    [self fadeIn : webView withDuration: 3 andWait : 1 ];
     
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
     [self.loadingIndicator stopAnimating];
@@ -225,6 +226,8 @@
 #pragma mark ANIMATION
 -(void)fadeIn:(UIView*)viewToFadeIn withDuration:(NSTimeInterval)duration 	  andWait:(NSTimeInterval)wait
 {
+    self.nightscoutSite.backgroundColor = [UIColor blackColor];
+    self.nightscoutSite.opaque = YES;
     [UIView beginAnimations: @"Fade In" context:nil];
     
     // wait for time before begin
@@ -234,8 +237,7 @@
     [UIView setAnimationDuration:duration];
     viewToFadeIn.alpha = 1;
     [UIView commitAnimations];
-    
-    
+
 }
 
 @end

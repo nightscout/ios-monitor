@@ -19,42 +19,37 @@
                         <subviews>
                             <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="94s-lY-C7V">
                                 <rect key="frame" x="0.0" y="20" width="600" height="500"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </webView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GUq-Nq-VYC">
                                 <rect key="frame" x="268" y="562" width="63" height="30"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="63" id="FSb-Gp-wXe"/>
                                 </constraints>
                                 <state key="normal" title="Refresh">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="2"/>
+                                        <integer key="value" value="3"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="reloadUrl:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s8x-Zb-wss"/>
                                 </connections>
                             </button>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Pda-Oa-pu9">
-                                <rect key="frame" x="281" y="281" width="37" height="37"/>
-                            </activityIndicatorView>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" minimumValueImage="mute-2-24.png" maximumValueImage="volume-up-4-24.png" translatesAutoresizingMaskIntoConstraints="NO" id="cPw-aN-d6v" customClass="SNVolumeSlider">
-                                <rect key="frame" x="17" y="524" width="566" height="31"/>
-                                <color key="tintColor" red="1" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            </slider>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="oVI-sD-5Pz">
                                 <rect key="frame" x="545" y="562" width="51" height="31"/>
                                 <connections>
                                     <action selector="changeSleep:" destination="BYZ-38-t0r" eventType="valueChanged" id="bdH-6n-OFX"/>
                                 </connections>
                             </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R8v-ZL-wix">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R8v-ZL-wix">
                                 <rect key="frame" x="454" y="554" width="89" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="89" id="jwr-mi-vc8"/>
+                                </constraints>
                                 <string key="text">Screen Lock 
 Override</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -63,39 +58,58 @@ Override</string>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xhq-O6-s1q">
                                 <rect key="frame" x="5" y="562" width="100" height="30"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="syk-hr-2JU"/>
                                 </constraints>
                                 <state key="normal" title="Set URL">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="2"/>
+                                        <integer key="value" value="3"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="updateUrl:" destination="BYZ-38-t0r" eventType="touchUpInside" id="te0-L5-tRB"/>
                                 </connections>
                             </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" minimumValueImage="mute-2-24.png" maximumValueImage="volume-up-4-24.png" translatesAutoresizingMaskIntoConstraints="NO" id="cPw-aN-d6v" customClass="SNVolumeSlider">
+                                <rect key="frame" x="17" y="522" width="566" height="31"/>
+                                <color key="tintColor" red="1" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </slider>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4JX-p1-7QB">
+                                <rect key="frame" x="-10" y="20" width="620" height="582"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="13z-pS-mKq">
+                                    <rect key="frame" x="0.0" y="0.0" width="620" height="582"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Pda-Oa-pu9">
+                                <rect key="frame" x="281" y="281" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Xhq-O6-s1q" firstAttribute="top" secondItem="cPw-aN-d6v" secondAttribute="bottom" constant="8" id="0dj-u9-cyU"/>
+                            <constraint firstItem="Xhq-O6-s1q" firstAttribute="top" secondItem="cPw-aN-d6v" secondAttribute="bottom" constant="10" id="0dj-u9-cyU"/>
+                            <constraint firstItem="4JX-p1-7QB" firstAttribute="centerX" secondItem="Pda-Oa-pu9" secondAttribute="centerX" id="351-Fm-B5N"/>
                             <constraint firstItem="R8v-ZL-wix" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="48e-bl-e24"/>
                             <constraint firstItem="Xhq-O6-s1q" firstAttribute="baseline" secondItem="GUq-Nq-VYC" secondAttribute="baseline" id="8BQ-zd-sBH"/>
                             <constraint firstItem="94s-lY-C7V" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8U1-sZ-2U0"/>
                             <constraint firstItem="Pda-Oa-pu9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="9AL-vp-ng9"/>
                             <constraint firstItem="R8v-ZL-wix" firstAttribute="centerY" secondItem="Xhq-O6-s1q" secondAttribute="centerY" id="DGd-bK-4Cy"/>
+                            <constraint firstItem="Xhq-O6-s1q" firstAttribute="top" secondItem="4JX-p1-7QB" secondAttribute="bottom" constant="-40" id="G2l-pI-Vd2"/>
                             <constraint firstItem="Xhq-O6-s1q" firstAttribute="top" secondItem="94s-lY-C7V" secondAttribute="bottom" constant="42" id="G70-RN-vsK"/>
+                            <constraint firstItem="4JX-p1-7QB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-26" id="HnX-BZ-2wT"/>
                             <constraint firstItem="oVI-sD-5Pz" firstAttribute="leading" secondItem="R8v-ZL-wix" secondAttribute="trailing" constant="2" id="LlW-Xu-nIA"/>
                             <constraint firstItem="94s-lY-C7V" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="Oe2-Sy-Lpf"/>
                             <constraint firstItem="Pda-Oa-pu9" firstAttribute="centerX" secondItem="GUq-Nq-VYC" secondAttribute="centerX" id="PDe-lL-EZh"/>
                             <constraint firstItem="oVI-sD-5Pz" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="10" id="WJ6-eL-taM"/>
                             <constraint firstItem="Xhq-O6-s1q" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-11" id="eN2-1d-XM8"/>
                             <constraint firstItem="GUq-Nq-VYC" firstAttribute="centerX" secondItem="94s-lY-C7V" secondAttribute="centerX" id="hnu-7K-ruE"/>
+                            <constraint firstItem="4JX-p1-7QB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="o5t-uy-TW4"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="oVI-sD-5Pz" secondAttribute="bottom" constant="7" id="ols-rS-zhd"/>
                             <constraint firstAttribute="trailing" secondItem="94s-lY-C7V" secondAttribute="trailing" id="qj6-KN-G2D"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Xhq-O6-s1q" secondAttribute="bottom" constant="8" symbolic="YES" id="qzV-zG-kAK"/>
@@ -105,6 +119,7 @@ Override</string>
                     </view>
                     <connections>
                         <outlet property="alertVolume" destination="cPw-aN-d6v" id="CG4-GZ-nCu"/>
+                        <outlet property="blur" destination="4JX-p1-7QB" id="cRV-hk-tuZ"/>
                         <outlet property="loadingIndicator" destination="Pda-Oa-pu9" id="ceM-dQ-H0J"/>
                         <outlet property="nightscoutSite" destination="94s-lY-C7V" id="4Gc-hB-eiC"/>
                         <outlet property="refreshUrl" destination="GUq-Nq-VYC" id="QrP-kJ-0d9"/>
