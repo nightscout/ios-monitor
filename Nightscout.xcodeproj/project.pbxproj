@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		807868E81A449E5800AB111B /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 807868E71A449E5800AB111B /* CoreBluetooth.framework */; };
 		809AAFBB1A3CDD4C00724B43 /* SNVolumeSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 809AAFBA1A3CDD4C00724B43 /* SNVolumeSlider.m */; };
 		809AAFBD1A3CE02F00724B43 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 809AAFBC1A3CE02F00724B43 /* MediaPlayer.framework */; };
 		809AAFBF1A3CE03500724B43 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 809AAFBE1A3CE03500724B43 /* AudioToolbox.framework */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		807868E71A449E5800AB111B /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		809AAFB91A3CDD4C00724B43 /* SNVolumeSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNVolumeSlider.h; sourceTree = "<group>"; };
 		809AAFBA1A3CDD4C00724B43 /* SNVolumeSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNVolumeSlider.m; sourceTree = "<group>"; };
 		809AAFBC1A3CE02F00724B43 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
@@ -72,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				807868E81A449E5800AB111B /* CoreBluetooth.framework in Frameworks */,
 				809AAFBF1A3CE03500724B43 /* AudioToolbox.framework in Frameworks */,
 				809AAFBD1A3CE02F00724B43 /* MediaPlayer.framework in Frameworks */,
 			);
@@ -90,6 +93,7 @@
 		DBC665951A3623FA00DE1748 = {
 			isa = PBXGroup;
 			children = (
+				807868E71A449E5800AB111B /* CoreBluetooth.framework */,
 				809AAFBE1A3CE03500724B43 /* AudioToolbox.framework */,
 				809AAFBC1A3CE02F00724B43 /* MediaPlayer.framework */,
 				DB8DB6621A36843A00C81DD6 /* Settings.bundle */,

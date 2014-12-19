@@ -8,6 +8,16 @@
 			<key>Type</key>
 			<string>PSTextFieldSpecifier</string>
 			<key>Title</key>
+			<string>Receiver SN</string>
+			<key>Key</key>
+			<string>g4Sn</string>
+			<key>DefaultValue</key>
+			<string>xx00000000</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTextFieldSpecifier</string>
+			<key>Title</key>
 			<string>Nightscout URL</string>
 			<key>Key</key>
 			<string>lastUrl</string>

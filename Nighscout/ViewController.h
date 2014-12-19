@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreBluetooth/CoreBluetooth.h>
 #import "SNVolumeSlider.h"
 
 
-@interface ViewController : UIViewController <UIWebViewDelegate>
+@interface ViewController : UIViewController <UIWebViewDelegate, CBCentralManagerDelegate, CBPeripheralDelegate>
 
 
 @property (weak, nonatomic) IBOutlet UIWebView *nightscoutSite;
@@ -22,12 +23,21 @@
 @property (strong, nonatomic) IBOutlet UISwitch *screenLock;
 @property (strong, nonatomic) IBOutlet UIVisualEffectView *blur;
 
+@property (strong, nonatomic) CBCentralManager *manager;
+@property (strong, nonatomic) CBPeripheral *peripheral;
+@property (strong, nonatomic) CBCharacteristic *peripheralCharacteristic;
+@property (strong, nonatomic) CBCharacteristic *authenticationCharacteristic;
+@property (strong, nonatomic) CBCharacteristic *writebackCharacteristic;
+@property (strong, nonatomic) CBCharacteristic *dataCharacteristic;
+@property (nonatomic, readwrite) NSInteger dataIndex;
+@property (strong, nonatomic) NSData *data;
+
 
 - (IBAction)updateUrl:(id)sender;
 - (IBAction)reloadUrl:(id)sender;
 - (IBAction)changeSleep:(id)sender;
 - (void)refreshNightscout;
 - (void)fadeIn:(UIView*)viewToFadeIn withDuration:(NSTimeInterval)duration 	  andWait:(NSTimeInterval)wait;
-- (void)blankWebView;
+
 @end
 
