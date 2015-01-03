@@ -28,6 +28,7 @@
 - (IBAction)changeSleep:(id)sender;
 - (void)refreshNightscout;
 - (void)fadeIn:(UIView*)viewToFadeIn withDuration:(NSTimeInterval)duration 	  andWait:(NSTimeInterval)wait;
+- (void)toggleScreenLockOverride:(BOOL)on;
 
 @end
 

@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "SettingsManager.h"
 
 @interface ViewController ()
 @property NSString *nightscoutUrl;
@@ -72,8 +72,7 @@
         self.nightscoutSite.mediaPlaybackRequiresUserAction = NO;
     } else {
         [self requestUrl:@"Hmm, URL was not valid, please retry"];
-        NSString *key = @"lastUrl";
-        [[NSUserDefaults standardUserDefaults] setObject:self.defaultUrl forKey:key];
+        [[SettingsManager sharedManager] setLastURL:self.defaultUrl];
     }
 }
 
@@ -88,8 +87,7 @@
         else {
             self.nightscoutUrl = [NSString stringWithFormat:@"http://%@", self.nightscoutUrl];
         }
-        NSString *key = @"lastUrl";
-        [[NSUserDefaults standardUserDefaults] setObject:self.nightscoutUrl  forKey:key];
+        [[SettingsManager sharedManager] setLastURL:self.nightscoutUrl];
         self.lastUrl = self.nightscoutUrl;
         [self.setUrl setTitle:@"Change URL" forState: UIControlStateNormal];
         [self loadUrl];
@@ -122,11 +120,8 @@
     
     [self.loadingIndicator startAnimating];
     
-    [self registerDefaultsFromSettingsBundle];
-    NSUserDefaults *data = [NSUserDefaults standardUserDefaults];
-    self.lastUrl = [data objectForKey:@"lastUrl"];
-    NSNumber *screenLock = [data valueForKey:@"screenLock"];
-    NSInteger screenLockValue = [screenLock intValue];
+    self.lastUrl = [[SettingsManager sharedManager] getLastURL];
+    BOOL screenLock = [[SettingsManager sharedManager] isScreenLock];
     
     if (self.lastUrl==nil || [self.lastUrl  isEqual:self.defaultUrl]){
         [self requestUrl:@"Please enter your Nightscout URL"];
@@ -137,58 +132,17 @@
         [self.setUrl setTitle:@"Change URL" forState: UIControlStateNormal];
         [self loadUrl];
     }
-    if(screenLockValue == 1)
-    {
+    if (screenLock) {
         [self.sleep setTitle: @"Sleep Off" forState: UIControlStateNormal];
-        [UIApplication sharedApplication].idleTimerDisabled = YES;
-        
-    } else{
-        
+    } else {
         [self.sleep setTitle: @"Sleep On" forState: UIControlStateNormal];
-        [UIApplication sharedApplication].idleTimerDisabled = NO;
     }
 
 }
 
 
 - (IBAction)changeSleep:(id)sender {
-    
-    if([sender isOn]){
-        NSLog(@"Switch is ON");
-        NSString *key = @"screenLock";
-        [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithBool:YES]  forKey:key];
-        [UIApplication sharedApplication].idleTimerDisabled = YES;
-    } else{
-        NSLog(@"Switch is OFF");
-        NSString *key = @"screenLock";
-        [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithBool:NO]  forKey:key];
-        [UIApplication sharedApplication].idleTimerDisabled = NO;
-    }
-    
-}
-
-- (void)registerDefaultsFromSettingsBundle {
-    // this function writes default settings as settings
-    NSString *settingsBundle = [[NSBundle mainBundle] pathForResource:@"Settings" ofType:@"bundle"];
-    if(!settingsBundle) {
-        NSLog(@"Could not find Settings.bundle");
-        return;
-    }
-    
-    NSDictionary *settings = [NSDictionary dictionaryWithContentsOfFile:[settingsBundle stringByAppendingPathComponent:@"Root.plist"]];
-    NSArray *preferences = [settings objectForKey:@"PreferenceSpecifiers"];
-    
-    NSMutableDictionary *defaultsToRegister = [[NSMutableDictionary alloc] initWithCapacity:[preferences count]];
-    for(NSDictionary *prefSpecification in preferences) {
-        NSString *key = [prefSpecification objectForKey:@"Key"];
-        if(key) {
-            [defaultsToRegister setObject:[prefSpecification objectForKey:@"DefaultValue"] forKey:key];
-            NSLog(@"writing as default %@ to the key %@",[prefSpecification objectForKey:@"DefaultValue"],key);
-        }
-    }
-    
-    [[NSUserDefaults standardUserDefaults] registerDefaults:defaultsToRegister];
-    
+    [[SettingsManager sharedManager] setScreenLock:[sender isOn]];
 }
 
 #pragma mark - UIWebViewDelegate delegate methods
@@ -238,6 +192,12 @@
     viewToFadeIn.alpha = 1;
     [UIView commitAnimations];
 
+}
+
+- (void)toggleScreenLockOverride:(BOOL)on {
+    NSLog(@"toggling screen lock: %d", on);
+    [self.screenLock setOn:on animated:NO];
+    [[SettingsManager sharedManager] setScreenLock:on];
 }
 
 @end
