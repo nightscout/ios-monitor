@@ -195,7 +195,6 @@
 }
 
 - (void)toggleScreenLockOverride:(BOOL)on {
-    NSLog(@"toggling screen lock: %d", on);
     [self.screenLock setOn:on animated:NO];
     [[SettingsManager sharedManager] setScreenLock:on];
 }
