@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1DCF98A81A58729A005F751F /* SettingsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DCF98A71A58729A005F751F /* SettingsManager.m */; };
 		809AAFBB1A3CDD4C00724B43 /* SNVolumeSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 809AAFBA1A3CDD4C00724B43 /* SNVolumeSlider.m */; };
 		809AAFBD1A3CE02F00724B43 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 809AAFBC1A3CE02F00724B43 /* MediaPlayer.framework */; };
 		809AAFBF1A3CE03500724B43 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 809AAFBE1A3CE03500724B43 /* AudioToolbox.framework */; };
@@ -39,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1DCF98A61A58729A005F751F /* SettingsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsManager.h; sourceTree = "<group>"; };
+		1DCF98A71A58729A005F751F /* SettingsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsManager.m; sourceTree = "<group>"; };
 		809AAFB91A3CDD4C00724B43 /* SNVolumeSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNVolumeSlider.h; sourceTree = "<group>"; };
 		809AAFBA1A3CDD4C00724B43 /* SNVolumeSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNVolumeSlider.m; sourceTree = "<group>"; };
 		809AAFBC1A3CE02F00724B43 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
@@ -117,6 +120,8 @@
 				DBC665A61A3623FB00DE1748 /* AppDelegate.m */,
 				DBC665A81A3623FB00DE1748 /* ViewController.h */,
 				DBC665A91A3623FB00DE1748 /* ViewController.m */,
+				1DCF98A61A58729A005F751F /* SettingsManager.h */,
+				1DCF98A71A58729A005F751F /* SettingsManager.m */,
 				DBC665AB1A3623FB00DE1748 /* Main.storyboard */,
 				DBC665AE1A3623FB00DE1748 /* Images.xcassets */,
 				DBC665B01A3623FB00DE1748 /* LaunchScreen.xib */,
@@ -278,6 +283,7 @@
 			files = (
 				DBC665AA1A3623FB00DE1748 /* ViewController.m in Sources */,
 				DBC665A71A3623FB00DE1748 /* AppDelegate.m in Sources */,
+				1DCF98A81A58729A005F751F /* SettingsManager.m in Sources */,
 				DBC665A41A3623FB00DE1748 /* main.m in Sources */,
 				809AAFBB1A3CDD4C00724B43 /* SNVolumeSlider.m in Sources */,
 			);
