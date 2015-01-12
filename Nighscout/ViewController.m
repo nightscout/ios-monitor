@@ -13,6 +13,9 @@
 @property NSString *nightscoutUrl;
 @property NSString *defaultUrl;
 @property NSString *lastUrl;
+
+@property (nonatomic, assign, getter=isURLPreferenceAvailable, readonly) BOOL urlPreferenceAvailable;
+
 @end
 
 @implementation ViewController
@@ -45,14 +48,17 @@
     [super didReceiveMemoryWarning];
 }
 
+- (BOOL)isURLPreferenceAvailable {
+    return self.lastUrl==nil || [self.lastUrl  isEqual:self.defaultUrl];
+}
+
 - (void)requestUrl:(NSString *)message {
     UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Hello!" message:message delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Continue",nil];
     alert.alertViewStyle = UIAlertViewStylePlainTextInput;
     UITextField * alertTextField = [alert textFieldAtIndex:0];
     alertTextField.keyboardType = UIKeyboardTypeAlphabet;
     
-    //TODO: boolean return method as this is being reused
-    if (self.lastUrl==nil || [self.lastUrl  isEqual:self.defaultUrl]){
+    if (self.isURLPreferenceAvailable){
         alertTextField.placeholder = @"http://your.nightscout.site";
     } else
     {
@@ -128,7 +134,7 @@
     NSNumber *screenLock = [data valueForKey:@"screenLock"];
     NSInteger screenLockValue = [screenLock intValue];
     
-    if (self.lastUrl==nil || [self.lastUrl  isEqual:self.defaultUrl]){
+    if (self.isURLPreferenceAvailable){
         [self requestUrl:@"Please enter your Nightscout URL"];
         [self.setUrl setTitle:@"Set URL" forState: UIControlStateNormal];
     } else
