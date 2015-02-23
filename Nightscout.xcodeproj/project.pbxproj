@@ -210,7 +210,7 @@
 				TargetAttributes = {
 					DBC6659D1A3623FB00DE1748 = {
 						CreatedOnToolsVersion = 6.1;
-						DevelopmentTeam = 653X2ET559;
+						DevelopmentTeam = DYN8SHLPKN;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -219,6 +219,7 @@
 					};
 					DBC665B61A3623FB00DE1748 = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = DYN8SHLPKN;
 						TestTargetID = DBC6659D1A3623FB00DE1748;
 					};
 				};
@@ -404,13 +405,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos8.0]" = "iPhone Developer";
 				INFOPLIST_FILE = Nighscout/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = Nightscout;
 				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -419,13 +420,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos8.0]" = "iPhone Developer";
 				INFOPLIST_FILE = Nighscout/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = Nightscout;
 				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

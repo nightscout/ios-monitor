@@ -6,7 +6,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVAudioSession.h>
 
 @interface SNVolumeSlider : UISlider
-
+@end
+@interface MHAudioBufferPlayer : NSObject <AVAudioSessionDelegate>
 @end

@@ -9,6 +9,7 @@
 
 #import <AudioToolbox/AudioToolbox.h>
 #import <MediaPlayer/MediaPlayer.h>
+#import <AVFoundation/AVAudioSession.h>
 
 @implementation SNVolumeSlider
 
