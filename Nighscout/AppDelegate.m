@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "SettingsManager.h"
 #import <AVFoundation/AVFoundation.h>
 
 @interface AppDelegate ()
@@ -30,7 +31,7 @@
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
-    
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
@@ -39,8 +40,8 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     ViewController* mainController = (ViewController*)  self.window.rootViewController;
+    [mainController toggleScreenLockOverride:[[SettingsManager sharedManager] isScreenLock]];
     mainController.blur.hidden = YES;
-    
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
