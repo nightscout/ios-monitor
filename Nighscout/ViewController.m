@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import "SettingsManager.h"
+#import <MediaPlayer/MediaPlayerDefines.h>
+#import <AVFoundation/AVFoundation.h>
 
 @interface ViewController ()
 @property NSString *nightscoutUrl;
@@ -22,7 +24,11 @@
     self.defaultUrl = @"http://www.nightscout.info/wiki/welcome/nightscout-for-ios-optional";
     self.blur.hidden = YES;
     [super viewDidLoad];
-    self.alertVolume = [[SNVolumeSlider alloc] init];
+    //self.alertVolume = [[SNVolumeSlider alloc] init];
+    //AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, error: nil);
+    [[AVAudioSession sharedInstance] setCategory: AVAudioSessionCategoryPlayback
+                                     withOptions:0 error: nil];
+    [[AVAudioSession sharedInstance] setActive: YES withOptions: 0 error: nil];
     [self.setUrl.layer setBorderWidth:1.0];
     [self.setUrl.layer setBorderColor:[[UIColor whiteColor] CGColor]];
     [self.refreshUrl.layer setBorderWidth:1.0];
